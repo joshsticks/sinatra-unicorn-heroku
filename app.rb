@@ -1,5 +1,9 @@
-require 'rubygems'
-require 'sinatra/base'
+require "rubygems"
+require "bundler/setup"
+
+require "sinatra"
+require "dalli"
+require "rack-cache"
 require 'coffee-script'
 require 'sass'
 
@@ -25,7 +29,7 @@ class CoffeeEngine < Sinatra::Base
 
 end
 
-class MarkCipolla < Sinatra::Base
+class App < Sinatra::Base
 
   use SassEngine
   use CoffeeEngine
@@ -38,7 +42,6 @@ class MarkCipolla < Sinatra::Base
   end
 
   if __FILE__ == $0
-    MarkCipolla.run! :port => 4000
+    App.run! :port => 4000
   end
-
 end

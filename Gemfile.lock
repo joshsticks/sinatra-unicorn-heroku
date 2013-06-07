@@ -5,11 +5,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    dalli (1.1.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     kgio (2.8.0)
     multi_json (1.7.6)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-protection (1.5.0)
       rack
     raindrops (0.11.0)
@@ -29,6 +32,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  dalli
+  rack-cache
   sass
   sinatra
   unicorn

@@ -3,4 +3,9 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'coffee-script'
 gem 'sass'
-gem 'unicorn'
+gem "dalli"
+gem "rack-cache"
+
+group :production do
+  gem "unicorn"
+end
