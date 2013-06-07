@@ -9,4 +9,4 @@ if memcache_servers = ENV["MEMCACHE_SERVERS"]
     entitystore: "memcached://#{memcache_servers}"
 end
 
-run Sinatra::Application
+run App

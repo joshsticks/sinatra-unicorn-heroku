@@ -29,7 +29,7 @@ class CoffeeEngine < Sinatra::Base
 
 end
 
-class Sintra::Application < Sinatra::Base
+class App < Sinatra::Base
 
   use SassEngine
   use CoffeeEngine
@@ -42,6 +42,6 @@ class Sintra::Application < Sinatra::Base
   end
 
   if __FILE__ == $0
-    Sintra::Application.run! :port => 4000
+    App.run! :port => 4000
   end
 end
